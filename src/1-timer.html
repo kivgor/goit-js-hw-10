@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 10 - Timer</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <input class="box text" type="text" id="datetime-picker" />
+    <button class="button disabled-button" type="button" data-start>
+      Start
+    </button>
+
+    <div class="timer">
+      <div class="field">
+        <span class="value text" data-days>00</span>
+        <span class="label text">Days</span>
+      </div>
+      <div class="field">
+        <span class="value text" data-hours>00</span>
+        <span class="label text">Hours</span>
+      </div>
+      <div class="field">
+        <span class="value text" data-minutes>00</span>
+        <span class="label text">Minutes</span>
+      </div>
+      <div class="field">
+        <span class="value text" data-seconds>00</span>
+        <span class="label text">Seconds</span>
+      </div>
+    </div>
+
+    <script src="./js/1-timer.js" type="module"></script>
+  </body>
+</html>

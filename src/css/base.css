@@ -17,11 +17,13 @@
 }
 
 body {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   min-width: 100vw;
   min-height: 100vh;
-  margin: 0;
+  margin: 0; */
+  width: 1128px;
+  margin: 0 auto;
 }
 
 main {

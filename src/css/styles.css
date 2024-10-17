@@ -16,3 +16,129 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* -------- 1-Timer styles --------*/
+.index-button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #4e75ff;
+  border-radius: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 16px;
+}
+
+.text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.value{
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.box {
+  width: 272px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #808080;
+  outline: none;
+  padding: 8px 16px;
+}
+
+.button {
+  min-width: 75px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #808080;
+  outline: none;
+  
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #4e75ff;
+  border-radius: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 36px;
+  margin-bottom: 32px;
+  margin-left: 8px;  
+}
+
+.button:hover,
+.button:focus {
+  background-color: #6c8cff;
+}
+
+.disabled-button {
+  color: #989898;
+  background-color: #cfcfcf;
+}
+
+.disabled-button:hover,
+.disabled-button:focus {
+  color: #989898;
+  background-color: #cfcfcf;
+}
+
+.timer {
+display: flex;
+gap: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------- 2-Snackbar styles --------*/
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.form-label {
+  display: block;
+}
+
+.fieldset {
+  width: 360px;
+  border-radius: 8px; 
+  display: flex;
+  flex-direction: row; 
+  gap: 48px;
+  justify-content: center;
+  align-items: center;
+}
+
+.field-input {
+width: 360px;
+display: block;
+}
+
+.field-button {
+  width: 360px;
+  margin:0;
+}
