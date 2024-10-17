@@ -6,20 +6,25 @@ import 'izitoast/dist/css/iziToast.min.css';
 const form = document.querySelector('form');
 form.addEventListener('submit', handleSubmit);
 
+function createPromise(delay, state) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (state === 'fulfilled') {
+        resolve(`✅ Fulfilled promise in ${delay}ms`);
+      } else {
+        reject(`❌ Rejected promise in ${delay}ms`);
+      }
+    }, delay);
+  });
+}
+
 function handleSubmit(event) {
   event.preventDefault();
 
-  const promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (event.target.state.value === 'fulfilled') {
-        resolve(`✅ Fulfilled promise in ${event.target.delay.value}ms`);
-      } else {
-        reject(`❌ Rejected promise in ${event.target.delay.value}ms`);
-      }
-    }, event.target.delay.value);
-  });
-
-  promise
+  const delay = event.target.delay.value;
+  const state = event.target.state.value;
+  const userPromise = createPromise(delay, state);
+  userPromise
     .then(value => {
       iziToast.show({
         icon: 'icon-person',
@@ -28,7 +33,7 @@ function handleSubmit(event) {
         position: 'topCenter',
         transitionIn: 'flipInX',
         transitionOut: 'flipOutX',
-        timeout: 5000,
+        timeout: 3000,
       });
     })
     .catch(error => {
@@ -39,7 +44,7 @@ function handleSubmit(event) {
         position: 'topCenter',
         transitionIn: 'flipInX',
         transitionOut: 'flipOutX',
-        timeout: 5000,
+        timeout: 3000,
       });
-    });
+    }); 
 }
